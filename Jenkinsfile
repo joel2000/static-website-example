@@ -42,7 +42,8 @@ pipeline {
            steps {
               script {
                 sh '''
-                    curl --head http://172.17.0.1:${PORT_EXPOSED} | grep  "200"
+                    curl --head http://STG_APP_ENDPOINT | grep  "200"
+                    curl --head http://PROD_APP_ENDPOINT | grep  "200"
                 '''
               }
            }
