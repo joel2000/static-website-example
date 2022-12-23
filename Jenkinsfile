@@ -42,8 +42,7 @@ pipeline {
            steps {
               script {
                 sh '''
-                    curl --head http://${STG_APP_ENDPOINT} | grep  "200"
-                    curl --head http://${PROD_APP_ENDPOINT} | grep  "200"
+                    curl --head http://localhost | grep "200"
                 '''
               }
            }
